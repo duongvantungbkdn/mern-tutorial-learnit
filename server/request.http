@@ -1,0 +1,69 @@
+// register user request
+POST http://localhost:5000/user/auth/register
+Content-Type: application/json
+
+{
+    "username": "TepThui",
+    "password": "111111111"
+}
+###
+
+// user login request
+POST http://localhost:5000/user/auth/login
+Content-Type: application/json
+
+{
+    "username": "DuongTung",
+    "password": "123456789"
+}
+
+###
+// create Data request
+POST http://localhost:5000/data/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRjM2ZkMTgxNTc0OGEyMTFkMDljMGQiLCJpYXQiOjE2NDI2MDg3OTh9.UEjEonNXe1spLbv_cKjqYIP7L2IXy1b5B9wsDFPUBzQ
+
+{
+    "title": "DuongTung post 1",
+    "description": "DuongTung post 2",
+    "url": "www.youtube.com/watch?v=rgFd17fyM4A",
+    "status": "LEARDNED"
+}
+
+###
+// update Data request
+PUT http://localhost:5000/data/61dd91cec4c35e9ce0d1ec0d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRjM2ZlYzgxNTc0OGEyMTFkMDljMTAiLCJpYXQiOjE2NDE5MTE4MzB9.-9cCx84x7Pb5XSnZE3gBI6ENQiNaNQZ7Ibhzjdtf5Vw
+
+{
+    "title": "HoangOanh post repairbcvbvbvbbcb",
+    "description": "HoangOanh post repair      vcbcgfdgdfgdfg",
+    "url": "www.youtube.com/watch?v=rgFd17fyM4Anew",
+    "status": "TO LEARN"
+}
+
+###
+// Delete Data request
+DELETE http://localhost:5000/data/61dd9240c4c35e9ce0d1ec10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRjM2ZkMTgxNTc0OGEyMTFkMDljMGQiLCJpYXQiOjE2NDE5MTI2MDl9.isEvG88oaeDa68gZDx_XZLZ07ZHpCVrcDtBIpYV0388
+
+###
+// get data list for user
+GET http://localhost:5000/data/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRjM2ZkMTgxNTc0OGEyMTFkMDljMGQiLCJpYXQiOjE2NDE5MTUyMzd9.JV63MzrP093yu5mLOeiw4T2iOlGIdpNZ8zPkkkfHVK8
+
+###
+// public contact request
+GET http://localhost:5000/contact
+
+###
+// public news request
+GET http://localhost:5000/news
+
+###
+// public home request
+GET http://localhost:5000/
+Authorization: Bearer eyJhbciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWRjM2ZkMTgxNTc0OGEyMTFkMDljMGQiLCJpYXQiOjE2NDE5MTUyMzd9.JV63MzrP093yu5mLOeiw4T2iOlGIdpNZ8zPkkkfHVK8
+
