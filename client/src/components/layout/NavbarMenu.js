@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import { AuthContext } from '../../contexts/AuthContext'
 import { useContext } from 'react'
+import Logout from '../../assets/icons/LogoutDoor.png'
 
 const NavbarMenu = () => {
     // load username from authState of AuthCOntext
@@ -37,11 +38,14 @@ const NavbarMenu = () => {
                             <NavDropdown.Item href="#action/3.2">My Posts</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">My profile</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Button  className='bg-danger font-weight-bolder text-white' onClick={logout}>
+                                    <img src={Logout} alt='logout' width='32' heighr='32'/>
+                                    Logout
+                                </Button>
+                            </NavDropdown.Item>
                         </NavDropdown>
-                        <Button variant='danger' className='font-weight-bolder text-white' onClick={logout}>
-                            Logout
-                        </Button> 
+                         
                     </Nav>
                 </Navbar.Collapse>
             </Container>            
