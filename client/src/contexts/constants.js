@@ -1,9 +1,7 @@
 export const apiUrl = 
     process.env.NODE_ENV !== 'production' 
-        //? 'http://localhost:5000' 
-        ? 'https://lit-peak-41408.herokuapp.com'
-        //? 'https://blooming-refuge-50059.herokuapp.com'
-        : 'someDeployUrl'
+        ? 'http://localhost:5000' 
+        : 'https://floating-tor-58137.herokuapp.com'
 
 export const LOCAL_STORAGE_TOKEN_NAME = 'learnit-mern'
 
