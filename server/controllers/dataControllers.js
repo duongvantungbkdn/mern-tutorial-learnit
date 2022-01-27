@@ -19,7 +19,7 @@ var DataControllers = {
             const newData = new Data({
                 title,
                 description,
-                url: url.startsWith('http://') ? url : `http://${url}`,
+                url: url.startsWith('http://'||'https://') ? url : `http://${url}`,
                 status: status || 'TO LEARN',
                 user: req.userId
             });
